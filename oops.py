@@ -7,7 +7,7 @@ import json
 
 class App:
     
-    bootstrap_servers = ['65.0.129.155:9092']
+    bootstrap_servers = ['public-ip-ec2:9092']
 
     def __init__(self):
         self.producer = KafkaProducer(bootstrap_servers=self.bootstrap_servers, #change ip here

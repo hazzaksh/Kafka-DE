@@ -21,13 +21,13 @@ def get_csv_from_json(data, topic):
 # Set up the S3 client
 s3 = boto3.client(
     's3',
-    aws_access_key_id='AKIAZIVCGE6ARU6GXGMR',
-    aws_secret_access_key='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'
+    aws_access_key_id='-------------',
+    aws_secret_access_key='-------------'
 )
 
 
 # Set up the Kafka consumer
-bootstrap_servers = ['65.0.129.155:9092']  # change IP here
+bootstrap_servers = ['public-ip-ec2:9092']  # change IP here
 consumer = KafkaConsumer(bootstrap_servers=bootstrap_servers,
                          value_deserializer=lambda m: json.loads(m.decode('utf-8')),
                          auto_offset_reset='earliest')
